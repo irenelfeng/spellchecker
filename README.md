@@ -9,9 +9,9 @@ Using an edit distance algorithm, guesses correct words spelled for incorrect wo
 		-lmfile ARPA wordbank file with probabilities 
 		-n Number of n-grams to calculate probabilities for words before and after (recommended: 2)
 		-infile file with errors marked as "<ERROR>mispelled_word_here</ERROR>" (program reads first 100 lines)
-        [-channel CHANNEL] tab or space-separated file of conversion matrix for each letter.
-        [-w WEIGHT] optional channelModel:sourceModel ratio. If want more weight on the channel, >1, if more weight on sourceModel, <1.
-        [-o O]
+        -channel tab or space-separated file of conversion matrix for each letter.
+        -w optional channelModel:sourceModel ratio. If want more weight on the channel, >1, if more weight on sourceModel, <1.
+        -o specify output
 
 ## Sample Usage
 ``python spellcheck.py -lmfile guten_brown_reuters_state.arpa -infile penntreebank.test -n 2 -channel feng-confusion.txt -o checked_out.txt -w .8
